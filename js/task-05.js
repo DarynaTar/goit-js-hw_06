@@ -2,7 +2,7 @@ let userName = document.querySelector('#name-input')
 let userOutputName = document.querySelector('#name-output')
 
 userName.addEventListener("input", (event) => {
-    userOutputName.textContent = event.currentTarget.value;
+    userOutputName.textContent = userName.value || 'Anonymous';
   });
 
-  if (userName.textContent === '') userName.textContent = 'Anonymous'
+

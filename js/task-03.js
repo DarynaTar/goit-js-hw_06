@@ -15,18 +15,11 @@ const images = [
 
 const listGallery = document.querySelector('.gallery')
 
-// for(let img of images) {
-// const itemGallery = document.createElement('li')
-// const image = document.createElement('img')
-// image.src = img.url
-// image.alt = img.alt
-// itemGallery.append(image)
+const itemGallery = images 
+.map(image => `<li><img class="cat-image" src=${image.url} alt=${image.alt}></li>`)
+.join('')
 
-// console.log(itemGallery)
-// listGallery.append(itemGallery)
-// }
+listGallery.insertAdjacentHTML('beforeend', itemGallery)
 
-for (let img of images) {
-  const itemGallery = `<li><img src="${img.url}" alt="${img.alt}"></li>`;
-  listGallery.insertAdjacentHTML('beforeend', itemGallery);
-}
+console.log(listGallery)
+
